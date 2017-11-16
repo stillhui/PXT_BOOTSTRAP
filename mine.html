@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>票信通-个人中心</title>
+
+		<!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> -->
+		<link rel="stylesheet" type="text/css" href="./css/header.css">
+		<link rel="stylesheet" type="text/css" href="./css/footer.css">
+		<link rel="stylesheet" type="text/css" href="./css/cardList.css">
+		<link rel="stylesheet" type="text/css" href="./css/cardDetail.css">
+		<link rel="stylesheet" type="text/css" href="./css/mine.css">
+
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+		<script src="./js/jquery.min.js"></script>
+
+		<script src="./js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="header"></div>
+
+		<div class="container-fluid cardDMineTitWraper">
+			<div class="container cardDMineTit">
+				<div class="cardDetailTit row" id="mineTit">
+					<div class="col-md-2">
+						<p><img src="./img/cardListTX.png" class="img-responsive txImg" alt="cardDetailTX" /></p>
+					</div>
+					<div class="cardDetailTitP1 col-md-4">
+						<p><b class="big">周一鸣</b>&nbsp;&nbsp;&nbsp;@河南郑州</p>
+						<p>@电话：13000000000</p>
+						<p>@单位：中国农业银行</p>
+						<p>@个人简介：不做则已，做则至全</p>
+					</div>
+					<div class="col-md-6 cardDetailTitP2">
+						<p class="show _release">@编辑</p>
+						<p class="show __share">@分享至</p>
+						<p class="show _setting">@账户设置</p>
+						<p class="show __add">@添加关注</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 row ListMine">
+					<p class="col-md-4"><span class="active"><i id="num01">20</i> 已发布</span></p>
+					<p class="col-md-4"><span><i id="num02">20</i> 已收藏</span></p>
+					<p class="col-md-4"><span><i id="num03">20</i> 已关注</span></p>
+				</div>
+				<div class="col-md-8 searchMine">
+					<input type="text" class="form-control search" placeholder="搜索我的发布、收藏、关注">
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid mineCardWrapper_">
+			<div class="container mineCardWrapper"></div>
+		</div>
+
+
+		<div id="footer"></div>
+
+	</body>
+
+	<script type="text/javascript">
+
+
+					var num01 = 0;  // 已发布信息总数
+					num01 = 8;     // 已发布信息数据
+					var num02 = 0;  // 已收藏信息总数
+					num02 = 8;     // 已收藏信息数据
+					var num03 = 0;  // 已关注人总数
+					num03 = 8;     // 已关注人数据
+					$("#num01").text(num01);
+					$("#num02").text(num02);
+					$("#num03").text(num03);
+
+					mineCase01();
+
+					$(".ListMine p").on("click",function(){
+						$(".ListMine p").find("span").removeClass("active");
+						$(this).find("span").addClass("active");
+						var id = $(this).index();
+						switch(id)
+						{
+						case 0:
+						  mineCase01();
+						  break;
+						case 1:
+						  mineCase02();	
+						  break;
+						case 2:
+						  mineCase03();	
+						  break;
+						default:
+						  return false;
+						}
+					})
+					$("#header").load("./header.html")
+					// $(".cardDMineTit").load("./cardDetail.html #mineTit")
+					$(".mineCard").load("./cardList.html")
+					$("#footer").load("./footer.html")
+
+
+					function mineCase01(){
+						
+						if(num01){
+							$(".mineCardWrapper").html("");
+							$(".mineCardWrapper").append('<div class="addInfo n01"><img src="./img/addImg.svg" class="img-responsive center-block _release" alt="Responsive image"></div>')
+							for(var i=0;i<num01;i++){
+								$(".mineCardWrapper").append('<div class="mineCard"></div>');
+							}
+							$(".mineCard").load("./cardList.html")
+						}else{
+							$(".mineCardWrapper").html("");
+							$(".mineCardWrapper").append('<div class="container followNone"><p><img src="./img/addImg.svg" class="img-responsive center-block" alt="Responsive image"></p><p>您尚未发布任何信息</p><p>点击上方图片发布信息</p></div>')
+						}
+					}
+					function mineCase02(){
+						
+						if(num02){
+						$(".mineCardWrapper").html("");
+						for(var i=0;i<num02;i++){
+								$(".mineCardWrapper").append('<div class="mineCard"></div>');
+								$(".mineCard").load("./cardList.html")
+							}
+						}else{
+							$(".mineCardWrapper").html("");
+							$(".mineCardWrapper").append('<div class="container followNone"><p><img src="./small.svg" class="img-responsive center-block" alt="Responsive image"></p><p>您尚未收藏任何信息</p><p>去看看</p></div>')
+						}
+					}
+					function mineCase03(){
+						
+						if(num03){
+							$(".mineCardWrapper").html("");
+							for(var i=0;i<num03;i++){
+								$(".mineCardWrapper").append('<div class="addInfo"><p class="p1"><img src="./img/tx.png" class="img-responsive center-block img_" alt="Responsive image"></p><p class="p2">周一鸣</p><p class="p3">13000000000</p><p class="p4">个人简介：不做则已，做则至全。</p><p class="p5">66条信息</p><p class="p6">取消关注</p></div>')
+							}
+						}else{
+							$(".mineCardWrapper").html("");
+							$(".mineCardWrapper").append('<div class="container followNone"><p><img src="./small.svg" class="img-responsive center-block" alt="Responsive image"></p><p>您尚未关注任何人</p><p>去看看</p></div>')
+						}
+					}
+
+					$("._release").on("click",function(){
+						window.location.assign("./release.html")
+					})
+					$("._setting").on("click",function(){
+						window.location.assign("./setting.html")
+					})
+					$(".__share").on("click",function(){
+						window.location.assign("http://www.baidu.com")
+					})
+					$(".__add").on("click",function(){
+						alert("添加关注成功")
+					})
+
+						
+
+						
+
+						
+					
+	</script>
+	
+</html>

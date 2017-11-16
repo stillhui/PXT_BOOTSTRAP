@@ -1,0 +1,73 @@
+.cardList{
+	width: 275px;
+	margin: 5px;
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: inline-block;
+}
+.cardList p{
+	margin-bottom: 0;
+	line-height: 1.8em;
+}
+.cardList .divBottom{
+	border-bottom: 1px dashed #ccc;
+	margin: 5px 0;
+}
+.cardList .txImg{
+	width: 50px;
+	height: 50px;
+	max-width: 50px !important;
+}
+.cardList .cardListInfo{
+	line-height: 50px;
+	/*margin-left: -15px;*/
+}
+.cardList .piaoImg{
+	margin: 5px 0;
+}
+.cardList .cardListFootar{
+	margin: 10px 0 0;
+}
+.cardList .floatR{
+	float: right;
+}
+.cardList .pd0{
+	padding: 0;
+}
+.overFH{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+/*.pd1{
+	padding: 5px;
+	border-color: #fdfdfd;
+	border: 1px solid #000;
+	text-align: center;
+}*/
+/*.motto{
+	margin: 0 10px;
+	width: auto;
+}
+.marginL10{
+	margin-left: 10px;
+}
+.marginLR15{
+	margin: 0 15px;
+	border-bottom: 1px dashed #000;
+}
+.lineH50{
+	line-height: 50px;
+	margin-left: -15px;
+}
+.cardList .txImg{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.cardImg{
+	padding: 15px;
+}*/

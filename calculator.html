@@ -1,0 +1,43 @@
+<!-- <link rel="stylesheet" type="text/css" href="./calculator.css"> -->
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-datetimepicker.min.css">
+<div class="calculator">
+	<div class="cTit">
+		<div class=""><span>贴现计算器</span></div>
+		<div class="toRight"><img src="./img/close.svg" class="img-responsive" alt="close"></div>
+	</div>
+	<div class="form-inline minH">
+		<p><span class="s1">票面金额：</span><input type="text" class="form-control" placeholder="请输入金额(万)" /></p>
+		<p><span class="s1">计息方式：</span><label style="margin: 0;font-weight: 400;width: 130px;text-align: left;"><input type="radio" name="interest" class="rd1" checked /><span class="s2">年息</span></label><label style="margin: 0;font-weight: 400;width: 130px;text-align: left;"><input type="radio" name="interest" class="rd1" /><span class="s2">月息</span></label></p>
+		<p><span class="s1">贴现利率：</span><input type="text" class="form-control" placeholder="请输入贴现利率" /></p>
+		<p><span class="s1">贴现日期：</span><label><input type="date" class="form-control" /></label></p>
+		<p><span class="s1">到期日期：</span><label><input type="date" class="form-control" /></label></p>
+		<p><span class="s1">调整天数：</span><input type="text" class="form-control" placeholder="请根据票据类型输入相应的天数(天)" /></p>
+		<p><span class="s1">手续费：</span><input type="text" class="form-control" placeholder="请输入手续费" /></p>
+	</div>
+	<div class="res">
+		<p>计息天数：365天</p>
+		<p>每十万贴息：0元</p>
+		<p>贴现利息：0元</p>
+		<p>贴现金额：0元</p>
+	</div>
+	<div class="but">
+		<button class="btn btn-default long2">清空</button>
+		<button class="btn btn-default long4">计算</button>
+	</div>
+</div>
+
+
+<!-- <script type="text/javascript" src="../fonts/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../fonts/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script> -->
+<!-- <script type="text/javascript">
+		$('.form_date').datetimepicker({
+	        language:  'zh-CN',
+	        weekStart: 1,
+	        todayBtn:  1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			minView: 2,
+			forceParse: 0
+	    });
+</script> -->

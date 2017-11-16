@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>票信通-我的发布详情页</title>
+		
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="./css/header.css">
+		<link rel="stylesheet" type="text/css" href="./css/footer.css">
+		<link rel="stylesheet" type="text/css" href="./css/cardDetail.css">
+		<link rel="stylesheet" type="text/css" href="./css/cardDetailPage.css">
+
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+		<script src="./js/jquery.min.js"></script>
+
+		<script src="./js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="header"></div>
+
+		
+		<div class="container-fluid content cardDP">
+			<div class="container cardD"></div>
+		</div>
+
+
+		<div id="footer"></div>
+
+	</body>
+
+	<script type="text/javascript">
+		$("#header").load("./header.html")
+		$(".cardD").load("./cardDetail.html")
+		$("#footer").load("./footer.html")
+
+		// 获取窗口宽度
+		if (window.innerWidth)
+		winWidth = window.innerWidth;
+		else if ((document.body) && (document.body.clientWidth))
+		winWidth = document.body.clientWidth;
+		// 获取窗口高度
+		if (window.innerHeight)
+		winHeight = window.innerHeight;
+		else if ((document.body) && (document.body.clientHeight))
+		winHeight = document.body.clientHeight;
+		// 通过深入 Document 内部对 body 进行检测，获取窗口大小
+		if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+		{
+		winHeight = document.documentElement.clientHeight;
+		winWidth = document.documentElement.clientWidth;
+		}
+		console.log("winWidth: "+winWidth)
+		console.log("winHeight: "+winHeight)
+
+		$(".cardDP").css("minHeight",winHeight-120);
+		$(window).resize(function() {
+		  $(".cardDP").css("minHeight",winHeight-120);
+		});
+
+	</script>
+	
+</html>

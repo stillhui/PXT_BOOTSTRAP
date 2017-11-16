@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>票信通-发布/编辑信息</title>
+
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="./css/header.css">
+		<link rel="stylesheet" type="text/css" href="./css/footer.css">
+		<link rel="stylesheet" type="text/css" href="./css/release.css">
+		<link rel="stylesheet" type="text/css" href="./css/calculator.css">
+
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+		<script src="./js/jquery.min.js"></script>
+
+		<script src="./js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="header"></div>
+
+		<div class="container-fluid content">
+			<div class="container setting">
+				<div class="settingTit"><p>发布&nbsp;/&nbsp;编辑信息</p></div>
+				<div class="settingInfo">
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">
+							<img src="./img/star.png" class="img-responsive invisible" alt="Responsive image">
+						    <span>信息类型：</span>
+					    </label>
+						<label class="l1">
+						    <input type="radio" name="optionsRadios" id="optionsRadios1" class="r1" value="银票" checked>
+						    <span class="s1">银票</span>
+						</label>
+						<label class="l1">
+						    <input type="radio" name="optionsRadios" id="optionsRadios1" class="r1" value="商票">
+						    <span class="s1 s1_">商票</span>
+					    </label>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">
+							<img src="./img/star.png" class="img-responsive" alt="Responsive image">
+						    <span>信息内容：</span>
+					    </label>
+					    <textarea class="form-control" rows="3" placeholder="不超过500个字"></textarea>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">
+							<img src="./img/star.png" class="img-responsive" alt="Responsive image">
+						    <span>上传照片：</span>
+					    </label>
+					    <p class="p1">
+					    	<label>
+					    		<input type="file" class="upImg hide" id="exampleInputFile">
+					    		<img src="./img/addImg.svg" class="img-responsive i1" alt="Responsive image">
+					    	</label>
+					    	<span class="s2">温馨提示：仅支持上传.jpg、.jpeg和.png格式的图片文件 大小需限制在5M内。</span>
+					    </p>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">
+							<img src="./img/star.png" class="img-responsive" alt="Responsive image">
+						    <span>所在地：</span>
+					    </label>
+					    <select><option>请选择</option><option>河南</option></select>
+					    <select><option>请选择</option><option>郑州</option></select>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">
+							<img src="./img/star.png" class="img-responsive" alt="Responsive image">
+						    <span>联系方式：</span>
+					    </label>
+					    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="请输入联系方式">
+					  </div>
+					  <div class="form-group"><button type="submit" class="btn btn-default save">发布</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="calculatorFixed" class="hide"></div>
+
+		<div id="footer"></div>
+
+	</body>
+
+	<script type="text/javascript">
+		$("#header").load("./header.html")
+		$("#footer").load("./footer.html")
+		$("#calculatorFixed").load("./calculator.html")
+
+		// 获取窗口宽度
+		if (window.innerWidth)
+		winWidth = window.innerWidth;
+		else if ((document.body) && (document.body.clientWidth))
+		winWidth = document.body.clientWidth;
+		// 获取窗口高度
+		if (window.innerHeight)
+		winHeight = window.innerHeight;
+		else if ((document.body) && (document.body.clientHeight))
+		winHeight = document.body.clientHeight;
+		// 通过深入 Document 内部对 body 进行检测，获取窗口大小
+		if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+		{
+		winHeight = document.documentElement.clientHeight;
+		winWidth = document.documentElement.clientWidth;
+		}
+		console.log("winWidth: "+winWidth)
+		console.log("winHeight: "+winHeight)
+
+		$(".setting").css("minHeight",winHeight-160);
+		$(window).resize(function() {
+		  $(".setting").css("minHeight",winHeight-160);
+		});
+
+	</script>
+	
+</html>

@@ -1,0 +1,62 @@
+
+.cardDetail .cardDetailTit{
+	padding: 10px;
+	min-height: 140px;
+	background: #fff;
+	border-radius: 5px;
+	margin: 20px 0;
+	border: 1px solid #e9e9e9;
+}
+.cardDetail .txImg{
+	width: 110px;
+	height: 110px;
+}
+.cardDetailTitP1{
+	/*margin-top: 20px;*/
+	margin-left: -30px;
+}
+.cardDetailTitP1 p{
+	margin: 0;
+	line-height: 1.8em;
+}
+.cardDetailTitP1 b.big{
+	font-weight: 400;
+	font-size: 1.6em;
+	line-height: 1.8em;
+	color: #333;
+}
+.cardDetailTitP2{
+	text-align: right;
+}
+.cardDetailTitP2 p{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 44px 0 0 10px;
+	background: #fdfdfd;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.cardDetail .cardDetailTitP2 p.show{
+	display: inline-block !important;
+}
+.cardDetail .cardDetailCon{
+	padding: 10px;
+	background: #fff;
+	border-radius: 5px;
+	margin-bottom: 120px;
+	border: 1px solid #e9e9e9;
+}
+.cardDetail .cardDetailCon .p1{
+	margin: 10px 0;
+	line-height: 2em;
+}
+.cardDetail .cardDetailCon .p2{
+	/*margin: 0;*/
+}
+.cardDetail .cardDetailCon .p2 .piaoImg{
+	width: 500px;
+	height: auto;
+}
+.cardDetail .cardDetailCon .p3{
+	/*margin: 0;*/
+}

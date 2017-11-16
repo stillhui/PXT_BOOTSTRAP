@@ -1,0 +1,34 @@
+<!-- <link rel="stylesheet" type="text/css" href="./img/header.css"> -->
+<div class="container-fluid header">
+	<div class="container">
+	  <div class="row header">
+		  <div class="col-md-3">
+			<img src="./img/PXTLOGO.png" class="img-responsive BlockToInBlock _index" alt="PXTLOGO">
+			<img src="./img/PXTLOGO_.png" class="img-responsive BlockToInBlock" alt="PXTLOGO">
+		  </div>
+		  <div class="col-md-4">
+			<input type="text" class="form-control search" id="inputText" placeholder="搜索">
+		  </div>
+		  <div class="col-md-5">
+			<p class="pLogin">
+				<span class="marginR10">客服热线：400-067-0002 (接听时间：工作日 9：00-17：30)</span>
+				<span class="show _wxlogin">登录</span>
+				<span class="show _mine"><img src="./img/tx.png" class="img-responsive BlockToInBlock txImg" alt="TX"></span>
+			</p>
+		  </div>
+	  </div>
+	</div>
+</div>
+
+<!-- Header页路由 -->
+<script type="text/javascript">
+	$("._index").on("click",function(){
+		window.location.assign("./index.html")
+	})
+	$("._wxlogin").on("click",function(){
+		window.location.assign("./wxlogin.html")
+	})
+	$("._mine").on("click",function(){
+		window.location.assign("./mine.html")
+	})
+</script>
